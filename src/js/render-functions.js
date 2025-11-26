@@ -3,7 +3,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryContainer = document.querySelector('.gallery');
-const loader = document.querySelector('.loader'); // якщо додаєш лоадер у HTML
+const loader = document.querySelector('.loader');
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
@@ -24,10 +24,8 @@ export function createGallery(images) {
       }) => `
       <li class="gallery-item">
         <a href="${largeImageURL}">
-         <img src="${webformatURL}" alt="${tags
-        .split(',')
-        .slice(0, 3)
-        .join(', ')}" />
+         <img src="${webformatURL}" alt="${tags}"
+ />
 
 
         </a>
